@@ -1,0 +1,79 @@
+.covid19 {
+  background-color: #fff;
+}
+
+.menu-link-list {
+  @include row-flex(between);
+}
+
+.menu-link-item {
+  display: block;
+  width: 107px;
+  padding: 11px 0;
+
+  .status::before {
+    content: "";
+    @include background-image(
+      block,
+      25px,
+      25px,
+      "../../assets/sprite-icon.png",
+      no-repat,
+      -349px -2px,
+      399px 373px
+    );
+    margin: 0 auto 6px;
+  }
+
+  .clinic::before {
+    content: "";
+    @include background-image(
+      block,
+      20px,
+      27px,
+      "../../assets/sprite-icon.png",
+      no-repat,
+      -352px -35px,
+      399px 373px
+    );
+    margin: 0 auto 6px;
+  }
+
+  .vaccine::before {
+    content: "";
+    @include background-image(
+      block,
+      27px,
+      26px,
+      "../../assets/sprite-icon.png",
+      no-repat,
+      -349px -69px,
+      399px 373px
+    );
+    margin: 0 auto 6px;
+  }
+
+  .fact::before {
+    content: "";
+    @include background-image(
+      block,
+      26px,
+      25px,
+      "../../assets/sprite-icon.png",
+      no-repat,
+      -227px -212px,
+      399px 373px
+    );
+    margin: 0 auto 6px;
+  }
+
+  .menu-text {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.2px;
+    color: $black;
+    text-align: center;
+  }
+}

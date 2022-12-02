@@ -1,0 +1,19 @@
+@mixin responsive($size) {
+  @if ($size == "md") {
+    @media screen and (min-width: $md-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($size == "lg") {
+    @media screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($size == "elg") {
+    @media screen and (min-width: $elg-breakpoint) {
+      @content;
+    }
+  }
+}

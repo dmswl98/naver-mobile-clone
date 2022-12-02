@@ -1,0 +1,50 @@
+.main {
+  @include column-flex();
+  padding-top: 60px;
+  background-color: $background;
+
+  .search-bar {
+    max-width: 488px;
+    width: 90%;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid $green;
+    margin: 0 20px;
+
+    &-logo {
+      @include size($width: 42px);
+      padding: {
+        top: 4px;
+        bottom: 4px;
+        left: 10px;
+      }
+    }
+
+    &-logo-icon {
+      @include size();
+    }
+
+    &-form {
+      padding-left: 16px;
+    }
+
+    &-input {
+      font-size: 18px;
+    }
+
+    &-smart-voice {
+      margin-right: 6px;
+    }
+  }
+
+  .ad {
+    width: 302px;
+    padding-top: 30px;
+    margin: 0 8px;
+
+    &-image {
+      @include size();
+      display: block;
+    }
+  }
+}

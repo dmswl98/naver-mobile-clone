@@ -1,0 +1,44 @@
+.footer {
+  background-color: $background;
+  padding: {
+    top: 36px;
+    bottom: 79px;
+  }
+}
+
+.info-wrap {
+  @include column-flex();
+}
+
+.info {
+  text-align: center;
+  color: $light-gray;
+  white-space: nowrap;
+
+  &-link {
+    display: inline-block;
+    padding: 3px 9px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .logo {
+    display: block;
+    margin: {
+      top: 16px;
+      bottom: 2px;
+    }
+
+    .naver-icon {
+      @include background-image(
+        inline-block,
+        74px,
+        14px,
+        "../../assets/sprite-logo.png",
+        no-repat,
+        0 -100px,
+        196px 195px
+      );
+    }
+  }
+}

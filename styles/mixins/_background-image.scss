@@ -1,0 +1,17 @@
+@mixin background-image(
+  $display,
+  $width,
+  $height,
+  $url,
+  $repeat,
+  $position,
+  $size
+) {
+  display: $display;
+  width: $width;
+  height: $height;
+  background: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}

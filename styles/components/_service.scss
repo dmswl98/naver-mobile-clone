@@ -1,0 +1,36 @@
+.service {
+  width: calc(208px + 21vw);
+  max-width: 316px;
+  background-color: $background;
+  margin: 0 40px;
+  padding: {
+    top: 24px;
+    bottom: 37px;
+  }
+
+  &-list {
+    width: 100%;
+    @include row-flex(between, center);
+  }
+
+  &-list:first-child {
+    margin-bottom: 12px;
+  }
+
+  &-link {
+    @include size($width: 44px);
+    display: block;
+
+    .service-icon {
+      @include size();
+      display: block;
+    }
+
+    .service-text {
+      display: block;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 4px;
+    }
+  }
+}

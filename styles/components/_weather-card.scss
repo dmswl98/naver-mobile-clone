@@ -1,0 +1,192 @@
+.weather {
+  padding: 16px;
+  background-color: $white;
+
+  &-header {
+    background-color: $white;
+  }
+
+  &-main {
+    background-color: $white;
+  }
+
+  &-footer {
+    padding-top: 12px;
+    border-top: 1px solid rgba(125, 127, 133, 0.16);
+  }
+}
+
+.today-weather {
+  @include row-flex(between, center);
+  margin-bottom: 16px;
+  background-color: $white;
+}
+
+.today-weather-info {
+  @include row-flex(start);
+
+  &-icon {
+    @include size(30px, 30px);
+    @include row-flex();
+    margin-right: 16px;
+
+    .weather-icon {
+      @include background-image(
+        block,
+        26px,
+        26px,
+        "../../assets/sprite-weather.png",
+        no-repat,
+        -400px -36px,
+        484px 459px
+      );
+    }
+  }
+
+  &-desc {
+    @include column-flex(start, start);
+  }
+
+  .desc-main {
+    font-size: 17px;
+    margin-bottom: 2px;
+
+    .temp {
+      font-style: unset;
+      margin-right: 1px;
+    }
+  }
+
+  .info-detail {
+    font-size: 14px;
+  }
+}
+
+.current-place {
+  @include row-flex();
+  background-color: $white;
+
+  .place-text {
+    display: block;
+    color: $gray;
+    font-size: 15px;
+    margin-right: 7px;
+    background-color: $white;
+  }
+
+  .location-icon {
+    @include background-image(
+      block,
+      16px,
+      16px,
+      "../../assets/sprite-icon.png",
+      no-repat,
+      -381px -184px,
+      399px 373px
+    );
+  }
+}
+
+.weather-category {
+  margin-bottom: 20px;
+
+  &-list {
+    @include row-flex(start);
+    @include no-scrollbar();
+    overflow-x: auto;
+    scroll-snap-type: none;
+    background-color: $white;
+  }
+
+  &-item {
+    display: block;
+    padding: 0 16px;
+    margin-right: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    border-radius: 20px;
+    border: 1px solid rgba(125, 127, 133, 0.16);
+    background-color: $white;
+  }
+}
+
+.weekly-list {
+  @include row-flex(between);
+  height: 129px;
+  padding-bottom: 22px;
+  background-color: $white;
+}
+
+.weekly-item {
+  @include column-flex(between);
+  height: 100%;
+  background-color: $white;
+
+  .day,
+  .temp {
+    font-size: 12px;
+    background-color: $white;
+  }
+
+  .weather-icon {
+    &.snow {
+      @include background-image(
+        block,
+        24px,
+        26px,
+        "../../assets/sprite-weather.png",
+        no-repat,
+        -400px -234px,
+        484px 459px
+      );
+      background-color: $white;
+    }
+
+    &.sun {
+      @include background-image(
+        block,
+        24px,
+        23px,
+        "../../assets/sprite-weather.png",
+        no-repat,
+        -400px -332px,
+        484px 459px
+      );
+      background-color: $white;
+    }
+  }
+}
+
+.weather-warn {
+  @include row-flex(start);
+  background-color: $white;
+
+  .warn-badge {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 10px;
+    margin-right: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(244, 67, 54, 0.9);
+    vertical-align: top;
+  }
+
+  .warn-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $gray;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    background-color: $white;
+  }
+}

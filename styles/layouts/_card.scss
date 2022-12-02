@@ -1,0 +1,46 @@
+.card-wrapper {
+  background-color: $background;
+  padding: {
+    top: 1px;
+    bottom: 10px;
+  }
+  width: 100%;
+}
+
+.card-list {
+  @include column-flex(start, center);
+  flex-wrap: wrap;
+
+  @include responsive(sm) {
+    margin: 0 30px;
+  }
+  @include responsive(md) {
+    height: 620px;
+  }
+  @include responsive(lg) {
+    margin: 0 20px;
+  }
+  @include responsive(elg) {
+    margin: 0 80px;
+  }
+}
+
+.card-item {
+  width: 96%;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin: 4px 8px;
+
+  @include responsive(md) {
+    max-width: 450px;
+    width: 46vw;
+  }
+
+  @include responsive(lg) {
+    max-width: 480px;
+  }
+
+  @include responsive(elg) {
+  }
+}

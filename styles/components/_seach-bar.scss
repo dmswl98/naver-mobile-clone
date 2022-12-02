@@ -1,0 +1,70 @@
+.search-bar {
+  @include row-flex(start);
+  @include size($height: 57px);
+  background-color: $white;
+  box-shadow: 0 5px 10px 0 rgba(117, 145, 181, 0.1);
+  z-index: 10;
+
+  &-logo {
+    @include size($width: 52px);
+    padding: {
+      top: 9px;
+      bottom: 8px;
+      left: 12px;
+    }
+  }
+
+  &-logo-icon {
+    @include size();
+    display: block;
+    background-color: $green;
+
+    .naver-icon {
+      @include background-image(
+        block,
+        40px,
+        40px,
+        "../../assets/sprite-search.png",
+        no-repat,
+        0px -194px,
+        323px 234px
+      );
+    }
+  }
+
+  &-form {
+    @include size();
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  &-input {
+    @include size();
+    @include truncate();
+    font-size: 20px;
+    color: rgb(30, 30, 35);
+    flex-grow: 1;
+    background-color: $white;
+  }
+
+  &-smart-voice {
+    @include size($width: 44px);
+    display: block;
+    margin-right: 8px;
+
+    .voice-icon {
+      @include background-image(
+        block,
+        34px,
+        34px,
+        "../../assets/sprite-search.png",
+        no-repat,
+        -174px -194px,
+        323px 234px
+      );
+
+      background-color: $green;
+    }
+  }
+}
