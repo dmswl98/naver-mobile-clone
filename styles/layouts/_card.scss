@@ -14,14 +14,18 @@
   @include responsive(sm) {
     margin: 0 30px;
   }
+
   @include responsive(md) {
     height: 620px;
   }
+
   @include responsive(lg) {
     margin: 0 20px;
   }
+
   @include responsive(elg) {
-    margin: 0 80px;
+    margin: 0 120px;
+    height: 700px;
   }
 }
 
@@ -42,5 +46,7 @@
   }
 
   @include responsive(elg) {
+    max-width: 600px;
+    width: 38vw;
   }
 }
